@@ -22,43 +22,123 @@
 
 
 
-
 header h1 {
 	display: inline;
-	font-family: 'Lusitana', serif;
+	font-family: 'Lemon', cursive;
 	line-height: 1.5em;
+	float: left;
 }
 
 
 nav {
 	font-size: 2em;
 	height: 3em;
+	float: right;
 }
 
 nav a {
 	text-decoration: none;
 	float: right;
 	width: 2em;
-	margin-top: 0.5em;
+	margin-top: 0.8em;
 }
 
+figure {
+  width: 100%;
+  margin: 2em auto;
+  height: 50%;
+}
+
+figure img{
+	display: block;
+	margin: 0 auto;
+}
+
+
+.banner{
+	background: url('../images/bg2.svg'), url('../images/bg1.jpg');
+	background-position: center, center bottom;
+	width: 960px;
+	height: 500px;
+	background-repeat: no-repeat;
+	margin-bottom: 2em;
+}
+
+footer{
+	height:100px;
+	background-color: lightgrey;
+
+	margin-top: 40px;
+}
+
+.copyright{
+	float: right;
+	display: inline;
+	margin-right: 20px;
+	margin-top: 40px;
+	color: #fff
+}
+
+.sprite1{
+	width: 22px;
+	height: 22px;
+	background:url('../images/sprites.png') -6px -11px;
+	margin:40px 0 40px 20px;
+}
+
+.sprite2{
+	width: 22px;
+	height: 22px;
+	background:url('../images/sprites.png') -37px -11px;
+	margin:40px 0 40px 10px;
+}
 /* #Media Queries
 ================================================== */
 
 	/* Smaller than standard 960 (devices and browsers) */
-	@media only screen and (max-width: 959px) {}
+	/*@media only screen and (max-width: 959px) {}*/
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
-	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+	/*@media only screen and (min-width: 768px) and (max-width: 959px) {}*/
 
 	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {}
+	/*@media only screen and (max-width: 767px) {}*/
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+	@media only screen and (min-width: 480px) and (max-width: 950px) {
+		h1{
+			text-align: center;
+			float: none;
+		}
+
+		nav{
+			display: block;
+			float: none;
+		}
+
+		figure img{
+			margin-bottom:
+		}
+	}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-	@media only screen and (max-width: 479px) {}
+	@media only screen and (max-width: 479px) {
+		figure img{
+		width: 200px;
+		height: 200px;
+		margin-bottom: .5em;
+		}
+
+		h1{
+			text-align: center;
+			font-size: 2.5em;
+			margin-bottom: -.5em;
+		}
+
+		nav{
+			display: inline-block;
+		}
+	}
 
 
 /* #Font-Face
