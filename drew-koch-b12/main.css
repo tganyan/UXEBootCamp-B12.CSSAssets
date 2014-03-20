@@ -1,0 +1,119 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav, .main, footer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav {
+  background-color: tomato;
+}
+
+nav a {
+  background-color: grey;
+}
+
+.main {
+  background-color: lightskyblue;
+  width: 100%;
+}
+
+section, article {
+  background-color: grey;
+  border: 3px solid black;
+  position: relative;
+}
+
+.slideshow {
+  width: 50%;
+}
+
+.main section {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+}
+
+.main article div {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: flex;
+  -webkit-flex-flow: row;
+}
+
+.main section article {
+  width: 50%;
+}
+
+.slideshow img {
+  width: 100%;
+  margin: auto;
+}
+
+.main ul li {
+  display: block;
+}
+
+.sprite a{
+  background-image:url('http://getspritexy.com/images/sample-sprite-getspritexy.png');
+  background-position: 0px 0px;
+}
+.sprite a:hover{
+  background-image:url('http://getspritexy.com/images/sample-sprite-getspritexy.png');
+  background-position: 20px 20px;
+}
+
+.wtfpsuedoclass {
+  width: 50%;
+}
+
+
+ul li {
+  display: inline;
+}
+
+progress{
+  width: calc(100% - 50px);
+}
+
+body section:nth-child(2) {
+  background:
+    url('http://placehold.it/100&text=left') top left no-repeat,
+    url('http://placehold.it/100&text=right') top right no-repeat;
+
+}
+
+
+.main article:nth-child(4){
+  width: 100%;
+  text-align: center;
+}
+
+.main article:nth-child(4) div{
+  display: inline-block;
+}
+
+.breadcrumbs {
+  position: absolute;
+  right: 50px;
+  bottom: 10px;
+}
+
+h1 {
+  margin-left: 30px;
+}
+
+
+footer {
+  background-color: orange;
+}
