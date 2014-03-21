@@ -1,5 +1,14 @@
+body {
+  margin: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
+}
+
+.divider-style {
+  border-bottom: 2px solid hotpink;
+  box-shadow: 0 3px 2px rgba(0,0,0,0.1);
 }
 
 nav, .main, footer {
@@ -13,22 +22,48 @@ nav, .main, footer {
 }
 
 nav {
+  -webkit-flex-flow: row nowrap;
   background-color: tomato;
 }
 
 nav a {
-  background-color: grey;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  color: white;
+}
+
+nav a:hover {
+  background: rgba(0,0,0,0.3);
 }
 
 .main {
-  background-color: lightskyblue;
   width: 100%;
 }
 
 section, article {
-  background-color: grey;
-  border: 3px solid black;
   position: relative;
+}
+
+.top {
+  height: 100px;
+  background:
+    url('http://placehold.it/100&text=left') center left no-repeat,
+    url('http://placehold.it/100&text=right') center right no-repeat;
+}
+
+.top h1 {
+  position: absolute;
+  left: 100px;
+  top: 18px;
+
+}
+
+.breadcrumbs {
+  position: absolute;
+  right: 100px;
+  top: 30px;
 }
 
 .slideshow {
@@ -86,14 +121,6 @@ progress{
   width: calc(100% - 50px);
 }
 
-body section:nth-child(2) {
-  background:
-    url('http://placehold.it/100&text=left') top left no-repeat,
-    url('http://placehold.it/100&text=right') top right no-repeat;
-
-}
-
-
 .main article:nth-child(4){
   width: 100%;
   text-align: center;
@@ -103,17 +130,56 @@ body section:nth-child(2) {
   display: inline-block;
 }
 
-.breadcrumbs {
-  position: absolute;
-  right: 50px;
-  bottom: 10px;
-}
-
-h1 {
-  margin-left: 30px;
-}
-
 
 footer {
-  background-color: orange;
+  -webkit-flex-flow: row nowrap;
+  justify-content: space-between;
 }
+
+
+/* ==== Media Queries ==== */
+
+  /* Tablet Portrait size to standard 960 (devices and browsers) */
+  @media only screen and (min-width: 48em) and (max-width: 59em) {
+
+  }
+
+  /* All Mobile Sizes (devices and browser) */
+  @media only screen and (max-width: 47em) {
+    nav {
+      -webkit-flex-flow: column wrap;
+      padding: 0;
+      width: 100%;
+    }
+
+    nav a {
+      width: 100%;
+      text-align: center;
+    }
+
+    .top {
+      text-align: center;
+    }
+
+    .top h1 {
+      padding-top: 30px;
+      margin: 0;
+      position: static;
+    }
+
+    .breadcrumbs {
+      position: static;
+    }
+
+
+  }
+
+  /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+  @media only screen and (min-width: 30em) and (max-width: 47em) {
+
+  }
+
+  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+  @media only screen and (max-width: 29em) {
+
+  }
