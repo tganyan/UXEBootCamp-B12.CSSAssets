@@ -67,7 +67,6 @@ figure img{
 footer{
 	height:100px;
 	background-color: lightgrey;
-
 	margin-top: 40px;
 }
 
@@ -102,22 +101,54 @@ footer{
 	/*@media only screen and (min-width: 768px) and (max-width: 959px) {}*/
 
 	/* All Mobile Sizes (devices and browser) */
-	/*@media only screen and (max-width: 767px) {}*/
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+		header h1{
+			line-height: 1em;
+			text-align: center;
+			margin-left: calc(50% - 212.5px);
+			margin-top: .2em;
+		}
+		header {
+			text-align: center;
+		}
+		nav{
+			margin: 1.5em auto;
+			height: 30px;
+
+		}
+
+		nav a {
+			float: none;
+			margin:0.25em;
+    }
+
+	}
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-	@media only screen and (min-width: 480px) and (max-width: 950px) {
-		h1{
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		header h1{
+			line-height: 1em;
+			display: block;
 			text-align: center;
-			float: none;
+		}
+
+		header{
+			position: relative;
 		}
 
 		nav{
-			display: block;
-			float: none;
+			margin-left: -20px;
 		}
 
 		figure img{
-			margin-bottom:
+			margin-bottom: 1em;
+			margin-top: 2em;
+		}
+
+		nav a{
+		text-align: center;
+		padding: 13px;
+		margin-bottom: 20px;
 		}
 	}
 
@@ -126,18 +157,27 @@ footer{
 		figure img{
 		width: 200px;
 		height: 200px;
-		margin-bottom: .5em;
+		margin-bottom: 2em;
 		}
 
-		h1{
+		header h1{
 			text-align: center;
 			font-size: 2.5em;
-			margin-bottom: -.5em;
+			line-height: 1.2em;
+			margin-bottom: -.2em;
+			margin-top: .2em
 		}
 
 		nav{
 			display: inline-block;
 		}
+
+		.banner{
+			height: 300px;
+			margin-bottom: 2em;
+		}
+
+
 	}
 
 
