@@ -6,6 +6,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
 
+h1 { font-size: 35px; line-height: 40px; margin-bottom: 10px; }
+h2 { font-size: 28px; line-height: 34px; margin-bottom: 8px; }
+h3 { font-size: 21px; line-height: 30px; margin-bottom: 4px; }
+h4 { font-size: 17px; line-height: 24px; }
+h5 { font-size: 14px; line-height: 21px; }
+h6 { font-size: 10px; line-height: 15px; }
+
 .divider-style {
   border-bottom: 2px solid hotpink;
   box-shadow: 0 3px 2px rgba(0,0,0,0.1);
@@ -55,8 +62,8 @@ section, article {
 
 .top h1 {
   position: absolute;
+  top: 10px;
   left: 100px;
-  top: 18px;
 
 }
 
@@ -66,8 +73,17 @@ section, article {
   top: 30px;
 }
 
-.slideshow {
-  width: 50%;
+.slideshow img {
+  height: 20em;
+}
+
+article header {
+  margin-left: 30px;
+  border-bottom: 1px dotted tomato;
+}
+
+.first article header {
+  margin-left: 0;
 }
 
 .main section {
@@ -78,12 +94,17 @@ section, article {
   -webkit-flex-flow: row nowrap;
 }
 
-.main article div {
+.teamChild {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -moz-box;
   display: flex;
   -webkit-flex-flow: row;
+  text-align: center;
+}
+
+figure {
+  border-bottom: 1px solid tomato;
 }
 
 .main section article {
@@ -110,6 +131,18 @@ section, article {
 
 .wtfpsuedoclass {
   width: 50%;
+}
+
+.crazy-skills ul {
+  margin-top: 0;
+}
+
+.crazy-skills ul li {
+  padding: 30px;
+}
+
+.crazy-skills ul li:first-child {
+  padding-top: 0;
 }
 
 
@@ -139,6 +172,17 @@ footer {
 
 /* ==== Media Queries ==== */
 
+  /* Smaller than standard 960 (devices and browsers) */
+  @media only screen and (max-width: 59em) {
+    .teamChild {
+      -webkit-flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+  }
+
   /* Tablet Portrait size to standard 960 (devices and browsers) */
   @media only screen and (min-width: 48em) and (max-width: 59em) {
 
@@ -162,13 +206,19 @@ footer {
     }
 
     .top h1 {
-      padding-top: 30px;
+      padding-top: 15px;
       margin: 0;
       position: static;
     }
 
     .breadcrumbs {
       position: static;
+    }
+
+    .main section {
+      -webkit-flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
     }
 
 
